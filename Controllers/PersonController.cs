@@ -65,6 +65,10 @@ namespace Checkboxes2.Controllers
             var selectedSkills = model.MySkills;
 
             // Convert the selected skills to a comma-separated string
+            if(selectedSkills == null)
+            {
+                selectedSkills = new List<string>();
+            }
             var skillset = string.Join(", ", selectedSkills);
 
             // Create a new Person object
